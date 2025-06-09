@@ -32,6 +32,20 @@ A lightweight, responsive To-Do Notes app built using **HTML**, **CSS (TailwindC
 
 ---
 
+## 🔮 Upcoming Features
+
+We're actively developing more powerful features to help you manage your time and tasks better:
+
+- ⏰ **Scheduling** (set reminders for your todos)
+- 📌 **Pin Todos** (keep important notes at the top)
+- 🧹 **Bulk Delete** (clear multiple tasks at once)
+- 🖼️ **Image Upload** (attach visuals to your tasks)
+- 📬 **Email Notifications** (get reminders via email)
+- 🔍 **Search and Filter** (quickly find tasks)
+- 🎨 **Dark Mode**
+
+---
+
 ## 📦 Installation
 
 1. Clone the repo:
