@@ -4,8 +4,23 @@ let noteDescription = document.getElementById("note_description");
 let description = document.getElementById("description");
 let todoContainer = document.getElementById("todo_container");
 let emptyMessage = document.getElementById("empty-message");
+let quote = document.getElementById("quote")
+let spinner = document.getElementById("spinner")
 emptyMessage.style.display = "none";
 let editingId = null;
+
+async function getQuotes() {
+  spinner.classList.remove("hidden");
+  let quotes = await fetch('https://dummyjson.com/quotes/random');
+  let quotesJson = await quotes.json()
+  spinner.classList.add("hidden");
+
+  quote.innerHTML = `
+    <blockquote class="text-center mb-6 text-gray-500 quote">&ldquo;${quotesJson.quote}&rdquo; &mdash; <footer class="author">${quotesJson.author}</footer>
+    </blockquote>  
+  `
+}
+getQuotes()
 
 function showNotification(message, type = "success") {
   const box = document.getElementById("notification");
@@ -67,7 +82,9 @@ window.editTodo = function (id) {
 };
 
 const displayTodos = () => {
-  if (JSON.parse(localStorage.getItem('todos')).length === 0) {
+  const todosLenght = JSON.parse(localStorage.getItem('todos') || '[]');
+
+  if (todosLenght.length === 0) {
     emptyMessage.style.display = "block";
   }
 
