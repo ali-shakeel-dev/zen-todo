@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.light_bulb {
+    background-size: 120px 120px;
+    height: 120px;
+    margin: 20px;
+    opacity: .1;
+    width: 120px;
+    pointer-events: none;
+    user-select: none;
+    cursor: none;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ZenTodo - Take a Note</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" href="/Icon.png" type="image/x-icon">
+</head>
+
+<body class="bg-white min-h-screen pb-6">
+
+  <header class="text-gray-600 body-font border-b-2 border-gray-100 px-20 py-3">
+    <div class="mx-auto flex md:flex-row items-center justify-between">
+      <a href="/" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <img src="/Icon.png" alt="" width="45px">
+        <span class="ml-3 text-xl">ZenTodo</span>
+      </a>
+      <nav class="flex text-center items-center text-base justify-center">
+        <a href="" class="mr-5 hover:text-gray-900">Documentation</a>
+        <button
+          class="inline-flex items-center bg-yellow-400 border-0 py-1 px-3 focus:outline-none hover:bg-yellow-500 rounded text-white mt-4 md:mt-0">Contact</button>
+      </nav>
+    </div>
+  </header>
+
+  <h1 class="text-3xl font-bold text-center my-4 text-gray-700">Stay Focused. Get Things Done.</h1>
+
+  <span id="quote">
+    <blockquote class="text-center my-6 text-gray-500">&ldquo;Until we can manage time, we can manage nothing
+      else.&rdquo; &mdash; <footer>Peter Drucker</footer>
+    </blockquote>
+  </span>
+
+  <div class="max-w-4xl mx-auto">
+    <div class="bg-white border rounded-xl shadow-md">
+      <div class="flex items-center justify-between px-4 py-4 ">
+        <input id="take_a_note" type="text" placeholder="Take a note..."
+          class="w-full focus:outline-none text-gray-800 " />
+        <div class="text-nowrap text-yellow-500 text-gray-500">
+          <button id="add_note" class="outline-none">Add Note</button>
+        </div>
+      </div>
+      <div id="description" class="flex items-center justify-between px-4 py-3 border-t-2 border-gray-100 hidden">
+        <input id="note_description" type="text" placeholder="Write a short description"
+          class="w-full focus:outline-none text-gray-800 " />
+      </div>
+    </div>
+
+    <span id="empty-message" class="flex text-center justify-center items-center flex-col">
+      <img class="light_bulb mx-auto" src="light-bulb.svg">
+      <p class="text-gray-400">Notes that you add appear here!</p>
+    </span>
+    <!-- Todo Cards Section -->
+    <div id="todo_container" class="flex flex-wrap gap-4 items-center justify-center mt-6"></div>
+
+  </div>
+  <script src="script.js"></script>
+  <!-- Notification container -->
+  <div id="notification"
+    class="fixed top-2 right-4 bg-green-500 text-white px-4 py-2 rounded shadow-md hidden transition-opacity duration-300">
+    <span id="notification-message">Message here</span>
+  </div>
+
+</body>
+
+</html>
