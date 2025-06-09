@@ -1,4 +1,4 @@
-# Cen Todo 📝 Simple To-Do Notes App
+# Zen Todo 📝 Simple To-Do Notes App
 
 A lightweight, responsive To-Do Notes app built using **HTML**, **CSS (TailwindCSS)**, and **JavaScript**. It allows you to quickly jot down tasks with descriptions, manage them with edit/delete options, and stores everything locally in your browser using **LocalStorage**.
 
